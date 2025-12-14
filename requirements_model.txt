@@ -1,0 +1,31 @@
+# ============================================================
+# Dependencies pour Emotion Detection avec BERT Small
+# ============================================================
+#
+# Installation:
+#   pip install -r requirements_model.txt
+#
+# Note: TensorFlow 2.10 est la dernière version avec support GPU natif Windows
+# ============================================================
+
+# === Core Dependencies (OBLIGATOIRES) ===
+tensorflow==2.10.0
+keras==2.10.0
+keras-nlp==0.6.0
+tensorflow-text==2.10.0
+numpy==1.26.4
+
+# === Dataset (pour entraînement uniquement) ===
+datasets==3.0.0
+transformers==4.45.2
+
+# === Optional: API REST ===
+# Décommentez ces lignes si vous voulez créer une API
+# flask==3.0.0
+# flask-cors==4.0.0
+# gunicorn==21.2.0  # Pour déploiement production
+
+# === Optional: Development ===
+# pytest==7.4.0     # Tests unitaires
+# black==23.12.0    # Formatage du code
+# flake8==6.1.0     # Linting

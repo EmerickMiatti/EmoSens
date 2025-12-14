@@ -1,0 +1,27 @@
+# Fichiers et dossiers à ignorer par git
+# Modèles lourds
+models/*.h5
+notebooks/**/*.pb
+notebooks/**/*.data*
+notebooks/**/*.index
+notebooks/**/variables/*
+
+# Environnements virtuels
+.venv/
+venv/
+
+# Fichiers temporaires Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Fichiers de logs
+*.log
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/

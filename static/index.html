@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎭 Détection d'Émotions - BERT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎭 Détection d'Émotions</h1>
+            <p>Analysez les émotions dans vos textes</p>
+        </div>
+
+        <div class="card">
+            <div class="input-group">
+                <label for="textInput">📝 Votre texte (en anglais)</label>
+                <textarea 
+                    id="textInput" 
+                    placeholder="Exemple: I just got my dream job! I'm so excited and grateful!"
+                ></textarea>
+            </div>
+
+            <div class="slider-group">
+                <label for="thresholdSlider">🎚️ Seuil de détection</label>
+                <div class="slider-container">
+                    <input 
+                        type="range" 
+                        id="thresholdSlider" 
+                        min="0.15" 
+                        max="0.80" 
+                        step="0.05" 
+                        value="0.50"
+                    >
+                    <span class="threshold-value" id="thresholdValue">50%</span>
+                </div>
+                <small style="color: #666; margin-top: 5px; display: block;">
+                    Plus bas = plus d'émotions détectées | Plus haut = seulement les plus fortes
+                </small>
+            </div>
+
+            <div class="button-group">
+                <button class="btn-primary" id="analyzeBtn">
+                    🚀 Analyser
+                </button>
+                <button class="btn-secondary" id="clearBtn">
+                    🗑️ Effacer
+                </button>
+            </div>
+
+            <div class="examples">
+                <button class="example-btn" data-text="I just got my dream job! I'm so excited and grateful!">
+                    😊 Joie
+                </button>
+                <button class="example-btn" data-text="I'm sad about leaving but also optimistic about the future">
+                    😔 Tristesse
+                </button>
+                <button class="example-btn" data-text="This is the worst experience ever. Very disappointed and angry.">
+                    😠 Colère
+                </button>
+                <button class="example-btn" data-text="I'm worried about the exam tomorrow. What if I fail?">
+                    😰 Peur
+                </button>
+            </div>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Analyse en cours...</p>
+        </div>
+
+        <div class="error" id="error"></div>
+
+        <div class="card results" id="results">
+            <h2 style="margin-bottom: 20px;">🎭 Émotions détectées</h2>
+            <div id="emotionsList"></div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value" id="emotionsCount">0</div>
+                    <div class="stat-label">Émotions</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="maxScore">0%</div>
+                    <div class="stat-label">Score max</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="avgScore">0%</div>
+                    <div class="stat-label">Score moyen</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
