@@ -3,7 +3,15 @@ disgust, embarrassment, excitement, fear, gratitude, grief,
 joy, love, nervousness, optimism, pride, realization,
 relief, remorse, sadness, surprise, neutral
 
+
 # Détection d'émotions avec BERT Base (GoEmotions)
+
+## Modèle pré-entraîné
+
+Un modèle BERT Base déjà entraîné est disponible ici :
+[Télécharger le modèle pré-entraîné (.h5)](https://drive.google.com/file/d/121To_zju3HDabohAOrZDS3I7cCMsK_B1/view?usp=drive_link)
+
+Placez ce fichier dans le dossier `models/` pour utiliser directement l'API ou les scripts.
 
 Ce projet permet de détecter plusieurs émotions dans des textes anglais grâce à un modèle BERT Base fine-tuné sur le dataset GoEmotions (28 émotions).
 
